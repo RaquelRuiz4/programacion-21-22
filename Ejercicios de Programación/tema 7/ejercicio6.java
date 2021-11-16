@@ -12,11 +12,6 @@ public class ejercicio6{
 		for(int i = 0; i < 15; i++){
 			array[i] = Integer.parseInt(System.console().readLine());
 		}	
-		
-		for(int i = 0; i < 15; i++){
-			System.out.print(array[i] + " ");
-		}
-		
 		int aux = array[14];
 		
 		for(int i = 14; i > 0; i--){
@@ -25,7 +20,7 @@ public class ejercicio6{
 		array[0] = aux;
 		
 		for (int i = 0; i < 15; i++) {
-			System.out.print(i);
+			System.out.print(array[i] + " ");
 		}
 	}
 }
