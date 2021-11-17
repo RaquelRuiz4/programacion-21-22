@@ -13,21 +13,33 @@ public class ejercicio10{
 		int par = 0;
 		int impar = 0;
 		
+		System.out.println("Array generado.");
 		for (int i = 0; i <= 19; i++){
 			array[i] = (int)(Math.random()*101);
 			System.out.print(array[i] + " ");
 		}
 		for (int i = 0; i <= 19; i++){
 		if (array[i] % 2 == 0){
-				array[i] = pares[par++];
+				 pares[par++] = array[i];
 				
 			} else {
-				array[i] = impares[impar++];
-			}
+				impares[impar++] = array[i];		}
+
 		}		
 		
-		for (int i = 0; i <= 19; i++){
-			System.out.println(pares[i] + " " + impares[i]);
+		
+		System.out.println();
+		System.out.println("Array primero pares y despues impares.");
+		for (int i = 0; i <= par; i++){
+			array[i] = pares[i];
+			
 		}
+		for (int i = par; i < 20; i++){
+			array[i] = impares[i - par];
+		}
+		
+		for (int i = 0; i < 20; i++) {
+			System.out.print(array[i] + " ");
+}
 	}
 }
