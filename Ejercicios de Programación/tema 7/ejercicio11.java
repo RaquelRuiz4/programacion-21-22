@@ -9,17 +9,17 @@ array resultante. */
 public class ejercicio11{
 	public static void main(String[] args){
 		
-		int[] array = new int[20];
-		int[] pares = new int[20];
-		int[] impares = new int[20];
-		int par = 0;
-		int impar = 0;
+		int[] array = new int[10];
+		int[] arrayPrimo = new int[10];
+		int[] arrayNoPrimo = new int[10];
 		int i = 0;
+		boolean esPrimo = true;
+		int primo = 0;
+		int noPrimo = 0;
 		
 		System.out.println("Introduzca 10 numeros.");
 		for (i = 0; i <= 9; i++){
-			array[i] = Integer.parseInt(System.console().readLine());
-			
+			array[i] = Integer.parseInt(System.console().readLine());	
 		}
 		System.out.print("Indice ");
 		for (i = 0; i <= 9; i++){
@@ -28,13 +28,57 @@ public class ejercicio11{
 		System.out.println();
 		System.out.print("Valor ");
 		for (i = 0; i <= 9; i++){
-			System.out.print(" " + array[i] + "    ");
+			System.out.print(" " + array[i] + "   ");
 		}
-		for (i = 2; i <= 9; i++){
+		
+		/////////////////////////////////////////////////
+		System.out.println();
+		System.out.println();
+		System.out.print("Indice ");
+		for (i = 0; i <= 9; i++){
+			System.out.print(i + "    ");
+		}
+		
+		for (i = 0; i <= 9; i++){
+			esPrimo = true;
+			for (int j = 2; j < array[i]; j++){
+				if (array[i] % j == 0){
+					esPrimo = false;
+				}
+			}
+			if (esPrimo){
+				arrayPrimo[primo++] = array[i];
+			} else {
+				arrayNoPrimo[noPrimo++] = array[i];
+			}
+		}
+		
+		for ( i = 0; i < primo; i++){
+			array[i] = arrayPrimo[i];
+		}
+		for ( i = primo; i < primo + noPrimo; i++){
+			array[i] = arrayNoPrimo[i - primo];
+		}
+		System.out.println();
+		System.out.print("Valor ");
+		for ( i = 0; i <= 9; i++){
+			System.out.print(" " + array[i] + "   ");
+		}
+		
+	}	
+}	
+		
+		
+		
+		
+		
+		
+		
+	/*	for (i = 2; i <= 9; i++){
 			if (array[i] ){
 					
 				}
-		}
+		}*/
 		
 	
 		/*for (int i = 0; i <= 19; i++){
@@ -59,5 +103,4 @@ public class ejercicio11{
 		for (int i = 0; i < 20; i++) {
 			System.out.print(array[i] + " ");
 		} */
-	}
-}
+
