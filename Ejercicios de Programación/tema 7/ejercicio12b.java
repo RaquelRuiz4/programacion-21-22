@@ -13,6 +13,9 @@ public class ejercicio12b{
 	int[][] array = new int[fila][columna];
 	int max = 900;
 	int min = 500;
+	int numMax = Integer.MIN_VALUE;
+	int numMin = Integer.MAX_VALUE;
+
 	
 	for(int i = 0; i < fila; i++){
 		for(int j = 0; j < columna; j++){
@@ -31,19 +34,18 @@ public class ejercicio12b{
 	
 	for(int i=array.length-1; i>=0; i--){
 		System.out.printf("%6d", array[i][array.length-1-i]);
+		if (numMax < array[i][array.length-1-i]){
+			numMax = array[i][array.length-1-i];
+		}
+		if (numMin > array[i][array.length-1-i]){
+			numMin = array[i][array.length-1-i];
+		}
 		}
 		System.out.println();
-	for(int i=0; i<=array.length-1; i++){
-		System.out.printf("%6d", array[i][array.length-1-i]);
-		}
-		System.out.println();
-	for(int i=0; i<=array.length-1; i++){
-		System.out.printf("%6d", array[i][i]);
-		}
-		System.out.println();
-	for(int i=array.length-1; i>=0; i--){
-		System.out.printf("%6d", array[i][i]);
-		}
+		System.out.println("El numero maximo es: " + numMax);
+		System.out.println("El numero minimo es: " + numMin);
+
+		
 	
 	}
 }
