@@ -23,18 +23,23 @@ public class ejercicioDiagonalArrayBi{
 	System.out.println();
 	// recorrer diagonal de array
 	
+	
+	// diagonal inferior izquierda
 	for(int i=array.length-1; i>=0; i--){
 		System.out.printf("%6d", array[i][array.length-1-i]);
 		}
 		System.out.println();
+		// diagonal superior derecha 
 	for(int i=0; i<=array.length-1; i++){
 		System.out.printf("%6d", array[i][array.length-1-i]);
 		}
 		System.out.println();
+		// diagonal superior izquierda
 	for(int i=0; i<=array.length-1; i++){
 		System.out.printf("%6d", array[i][i]);
 		}
 		System.out.println();
+		// diagonal inferior derecha 
 	for(int i=array.length-1; i>=0; i--){
 		System.out.printf("%6d", array[i][i]);
 		}
