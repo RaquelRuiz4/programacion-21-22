@@ -15,6 +15,8 @@ public class ejercicio12b{
 	int min = 500;
 	int numMax = Integer.MIN_VALUE;
 	int numMin = Integer.MAX_VALUE;
+	int cont = 0;
+	int suma = 0;
 
 	
 	for(int i = 0; i < fila; i++){
@@ -33,7 +35,9 @@ public class ejercicio12b{
 	// recorrer diagonal de array
 	
 	for(int i=array.length-1; i>=0; i--){
+		cont++;
 		System.out.printf("%6d", array[i][array.length-1-i]);
+		suma += array[i][array.length-1-i];
 		if (numMax < array[i][array.length-1-i]){
 			numMax = array[i][array.length-1-i];
 		}
@@ -44,6 +48,7 @@ public class ejercicio12b{
 		System.out.println();
 		System.out.println("El numero maximo es: " + numMax);
 		System.out.println("El numero minimo es: " + numMin);
+		System.out.println("La media es: " + (suma/cont));
 
 		
 	
