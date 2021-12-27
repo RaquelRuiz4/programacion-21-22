@@ -48,5 +48,15 @@ public class operacionesEnteros{
 		return resultado;
 	}	
 
-
+	// digitos: Cuenta el número de dígitos de un número entero.
+	public static int digitos(int num){
+		int cont = 0;
+		do{
+			num %= 10;
+			cont++;
+			}
+		while(num > 0);
+		return cont;
+	}
+	
 }
