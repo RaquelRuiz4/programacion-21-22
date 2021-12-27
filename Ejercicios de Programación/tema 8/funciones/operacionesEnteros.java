@@ -37,10 +37,16 @@ public class operacionesEnteros{
 		while(!esPrimo(num));
 		return num;
 	}
+	
+	// potencia: Dada una base y un exponente devuelve la potencia.
+	public static int potencia(int base, int exp){
+		int resultado = base;
 		
-		
-		
-		
-		
-		
+		for(int i = 0; i < exp; i++){
+			resultado *= base;
+		}
+		return resultado;
+	}	
+
+
 }
