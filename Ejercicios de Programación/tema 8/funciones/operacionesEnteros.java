@@ -4,9 +4,6 @@
 Se empieza contando por el 0 y de izquierda a derecha.
 8. posicionDeDigito: Da la posición de la primera ocurrencia de un dígito
 dentro de un número entero. Si no se encuentra, devuelve -1.
-
-10. quitaPorDelante: Le quita a un número n dígitos por delante (por la
-izquierda).
 11. pegaPorDetras: Añade un dígito a un número por detrás.
 12. pegaPorDelante: Añade un dígito a un número por delante.
 13. trozoDeNumero: Toma como parámetros las posiciones inicial y final
@@ -85,6 +82,17 @@ public class operacionesEnteros{
 	
 	// quitaPorDelante: Le quita a un número n dígitos por delante (por la izquierda).
 		public static int quitaPorDelante (int num, int quita){
-	
+		int vuelta = voltea(num);
+		vuelta = quitaPorDetras(vuelta, quita);
+		vuelta = voltea(vuelta);
+		return vuelta;
 	}
+	
+	// digitoN: Devuelve el dígito que está en la posición n de un número entero. Se empieza contando por el 0 y de izquierda a derecha.
+	/*	public static int digitoN (int num, int dig){
+			
+			
+		} */
+		
+		
 }
